@@ -1,3 +1,5 @@
+import sys
+
 encoding_dict = {
     " ": "%20",
     "!": "%21",
@@ -41,7 +43,7 @@ def encode(input: str) -> str:
     return "".join(encoded_chars)
 
 if __name__ == "__main__":
-    input_string = input("Enter string to encode: ")
+    input_string = sys.argv[1]
     encoded_string = encode(input_string)
     print("Encoded string: ")
     print(encoded_string)
