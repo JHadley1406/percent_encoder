@@ -1,4 +1,6 @@
+import pyperclip
 import sys
+
 
 encoding_dict = {
     " ": "%20",
@@ -45,5 +47,5 @@ def encode(input: str) -> str:
 if __name__ == "__main__":
     input_string = sys.argv[1]
     encoded_string = encode(input_string)
-    print("Encoded string: ")
-    print(encoded_string)
+    pyperclip.copy(encoded_string)
+    print("Encoded string copied to clipboard")
